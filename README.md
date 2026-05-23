@@ -24,6 +24,3 @@ A fully responsive, multi-page website built for a luxury hair salon brand based
 ## Pages
 - **Home** — Hero, Services, About, Gallery preview, Testimonials, Booking form
 - **Gallery** — Filterable masonry grid with full-screen lightbox
-
----
-Built by [Your Name](https://yourportfolio.com)
