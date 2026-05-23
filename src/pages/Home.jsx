@@ -256,7 +256,8 @@ function Footer() {
     <footer className="site-footer">
       <div className="footer-grid">
         <div>
-          <div className="footer-logo">{SALON_CONFIG.name}</div>
+          <div className="footer-logo"><img src="/images/velvetlogo-rbg.png" alt="Velvet Strand" style={{ height: '80px', width: 'auto' }} />
+</div>
           <p className="footer-tagline">Premium hair artistry for the<br />modern Nigerian woman.</p>
         </div>
         <div>

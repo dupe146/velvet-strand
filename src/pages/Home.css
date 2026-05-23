@@ -113,7 +113,8 @@
 ═══════════════════════════════════════ */
 .site-footer { background: var(--black-forest); padding: 4rem 3rem 2rem; border-top: 1px solid rgba(202,213,147,0.08); }
 .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-.footer-logo { font-family: var(--serif); font-size: 1.5rem; color: var(--dry-sage); margin-bottom: 0.8rem; }
+.footer-logo { font-family: var(--serif); font-size: 1.5rem; color: var(--dry-sage); margin-bottom: 0.8rem;}
+
 .footer-tagline { font-size: 0.8rem; color: rgba(202,213,147,0.4); line-height: 1.7; }
 .footer-heading { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--lime-moss); margin-bottom: 1rem; }
 .footer-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
