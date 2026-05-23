@@ -194,13 +194,12 @@ function About() {
 
 /* ── GALLERY PREVIEW ── */
 function GalleryPreview() {
-  const preview = [
+  const featured = [
     
-    '/images/knotless_braids.jpeg',
-    '/images/cornrows.jpeg',
-    '/images/bridal_hair.jpeg',
-    '/images/wiginstall.jpeg',
-    
+    { src: '/images/knotless_braids.jpeg', label: 'Knotless Braids' },
+    { src: '/images/bridal_hair.jpeg', label: 'Bridal Style' },
+    { src: '/images/wiginstall.jpeg', label: 'Wig Install' },
+    { src: '/images/sleek_style.jpeg', label: 'Sleek Styles' },
   ];
 
   return (
@@ -212,14 +211,19 @@ function GalleryPreview() {
         </div>
         <Link to="/gallery" className="btn-ghost">See All Transformations →</Link>
       </div>
-      <div className="gallery-grid reveal reveal-delay-1">
-        {preview.map((src, i) => (
-          <div key={i} className={`g-item ${i === 0 || i === 3 ? 'tall' : ''} ${i === 4 ? 'wide' : ''}`}>
-            <img src={src} alt={`Transformation ${i + 1}`} loading="lazy" />
-          </div>
+
+      <div className="oval-grid reveal reveal-delay-1">
+        {featured.map((item, i) => (
+          <Link to="/gallery" key={i} className="oval-item">
+            <div className="oval-frame">
+              <img src={item.src} alt={item.label} loading="lazy" />
+            </div>
+            <p className="oval-label">{item.label}</p>
+          </Link>
         ))}
       </div>
-      <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+
+      <div className="gallery-cta-row reveal">
         <Link to="/gallery" className="btn-primary">View All Transformations</Link>
       </div>
     </section>
