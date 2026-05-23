@@ -1,0 +1,53 @@
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.3rem 3rem;
+  background: rgba(36, 48, 16, 0.85);
+  backdrop-filter: blur(12px);
+  transition: padding 0.3s, background 0.3s;
+}
+.navbar.scrolled { padding: 0.9rem 3rem; background: rgba(36, 48, 16, 0.97); }
+
+.nav-logo {
+  font-family: var(--serif); font-size: 1.35rem; font-weight: 400;
+  color: var(--dry-sage); letter-spacing: 0.06em; text-decoration: none;
+}
+.nav-logo-img {
+  height: 140px;      /* controls how big the logo appears in the nav */
+  width: auto;
+  display: block;
+}
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links button, .nav-links a {
+  font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(202,213,147,0.7); text-decoration: none;
+  background: none; border: none; cursor: pointer; font-family: var(--sans);
+  transition: color 0.2s;
+}
+.nav-links button:hover, .nav-links a:hover { color: var(--dry-sage); }
+
+.nav-cta {
+  font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--lime-moss); color: var(--off-white);
+  padding: 0.6rem 1.5rem; border: none; cursor: pointer;
+  font-family: var(--sans); font-weight: 500;
+  transition: background 0.2s; border-radius: 2px;
+}
+.nav-cta:hover { background: var(--yellow-green); color: var(--black-forest); }
+
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--dry-sage); transition: all 0.3s; }
+
+@media (max-width: 768px) {
+  .navbar { padding: 1rem 1.5rem; }
+  .navbar.scrolled { padding: 0.85rem 1.5rem; }
+  .hamburger { display: flex; }
+  .nav-cta { display: none; }
+  .nav-links {
+    display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--black-forest); flex-direction: column;
+    align-items: center; justify-content: center; gap: 2.5rem;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links button, .nav-links a { font-size: 1.1rem; color: var(--dry-sage); }
+}
