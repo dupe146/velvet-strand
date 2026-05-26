@@ -13,7 +13,7 @@
   color: var(--dry-sage); letter-spacing: 0.06em; text-decoration: none;
 }
 .nav-logo-img {
-  height: 120px;      /* controls how big the logo appears in the nav */
+  height: 85px;      /* controls how big the logo appears in the nav */
   width: auto;
   display: block;
 }

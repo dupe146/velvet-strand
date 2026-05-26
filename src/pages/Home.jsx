@@ -202,6 +202,7 @@ function GalleryPreview() {
     { src: '/images/sleek_style.jpeg', label: 'Sleek Styles' },
   ];
 
+  
   return (
     <section className="gallery-preview" id="gallery-preview">
       <div className="gallery-header reveal">
@@ -212,13 +213,13 @@ function GalleryPreview() {
         <Link to="/gallery" className="btn-ghost">See All Transformations →</Link>
       </div>
 
-      <div className="oval-grid reveal reveal-delay-1">
+      <div className="circles-row reveal reveal-delay-1">
         {featured.map((item, i) => (
-          <Link to="/gallery" key={i} className="oval-item">
-            <div className="oval-frame">
+          <Link to="/gallery" key={i} className="circle-item">
+            <div className="circle-frame">
               <img src={item.src} alt={item.label} loading="lazy" />
             </div>
-            <p className="oval-label">{item.label}</p>
+            <p className="circle-label">{item.label}</p>
           </Link>
         ))}
       </div>
@@ -227,9 +228,8 @@ function GalleryPreview() {
         <Link to="/gallery" className="btn-primary">View All Transformations</Link>
       </div>
     </section>
-  );
+  )
 }
-
 /* ── TESTIMONIALS ── */
 function Testimonials() {
   return (
